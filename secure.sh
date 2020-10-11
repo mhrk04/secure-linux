@@ -5,9 +5,7 @@
 #-fail2ban
 
 # --- Setup UFW rules
-sudo ufw limit 22/tcp  
-sudo ufw allow 80/tcp  
-sudo ufw allow 443/tcp  
+  
 sudo ufw default deny incoming  
 sudo ufw default allow outgoing
 sudo ufw enable
@@ -25,11 +23,6 @@ cat <<EOF > /etc/host.conf
 order bind,hosts
 multi on
 EOF
-
-# --- Enable fail2ban
-sudo cp fail2ban.local /etc/fail2ban/
-sudo systemctl enable fail2ban
-sudo systemctl start fail2ban
 
 echo "listening ports"
 sudo netstat -tunlp
