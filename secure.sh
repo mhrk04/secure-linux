@@ -1,10 +1,6 @@
 #!/bin/bash
 #-----------------------
-#--Required Packages-
-#-ufw
-#-fail2ban
 
-# --- Setup UFW rules
   
 sudo ufw default deny incoming  
 sudo ufw default allow outgoing
